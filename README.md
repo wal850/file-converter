@@ -1,6 +1,6 @@
-# 📁 File Format Converter
+# 📁 File Format Converter + OCR
 
-A web-based file format converter built with Streamlit. Convert between PDF, Word, Excel, CSV, Image, JSON, YAML, and XML formats.
+A web-based file format converter and OCR tool built with Streamlit. Convert between PDF, Word, Excel, CSV, Image, JSON, YAML, and XML formats. Extract text from images and scanned PDFs.
 
 ## 🚀 Features
 
@@ -8,8 +8,10 @@ A web-based file format converter built with Streamlit. Convert between PDF, Wor
 - 📊 **Excel ↔ CSV** - Convert between spreadsheet formats
 - 🖼️ **Image formats** - JPG, PNG, WEBP, BMP conversion
 - 📝 **Data formats** - JSON, YAML, XML conversion
-- ⚡ **Batch conversion** - Convert multiple files at once
+- 🔍 **OCR (Text Extraction)** - Extract text from images and scanned PDFs
 - 🌙 **Dark/Light mode** - Toggle between themes
+- ⚡ **Batch conversion** - Convert multiple files at once
+- 🌍 **Multi-language OCR** - Supports English, Spanish, French, German, and more
 
 ## 🛠️ Tech Stack
 
@@ -20,6 +22,8 @@ A web-based file format converter built with Streamlit. Convert between PDF, Wor
 - **Pandas / openpyxl** - Spreadsheet handling
 - **Pillow** - Image processing
 - **PyYAML** - YAML handling
+- **Tesseract OCR** - Text extraction from images
+- **pdf2image** - PDF to image conversion
 
 ## 📦 Installation
 
@@ -37,20 +41,59 @@ source myenv/bin/activate
 
 pip install -r requirements.txt
 
-### 4. Run the app
+### 4. Install Tesseract (for OCR)
+
+Ubuntu/Debian:
+sudo apt update
+sudo apt install tesseract-ocr tesseract-ocr-eng
+
+### 5. Run the app
 
 streamlit run pyth.py
 
 ## 📂 Usage
 
-1. **Upload a file** via the file uploader
-2. **Select target format** from the dropdown
-3. **Click "Convert"** to process the file
-4. **Download** the converted file
+### Convert Files
+1. Upload a file via the file uploader
+2. Select target format from the dropdown
+3. Click "Convert" to process the file
+4. Download the converted file
 
-## ⚡ Batch Conversion
+### Extract Text from Images (OCR)
+1. Go to the "Extract Text (OCR)" tab
+2. Upload an image or PDF
+3. Select the language
+4. Click "Extract Text"
+5. Copy or download the extracted text
 
-Upload multiple files and convert them all at once to the same format.
+### Batch Conversion
+1. Go to the "Batch Convert" tab
+2. Upload multiple files
+3. Select the target format
+4. Download all converted files as a ZIP
+
+## 🔍 OCR Features
+
+- Extracts text from JPG, PNG, WEBP, BMP images
+- Extracts text from scanned PDFs
+- Supports multiple languages:
+  - English (eng)
+  - Spanish (spa)
+  - French (fra)
+  - German (deu)
+  - Italian (ita)
+  - Portuguese (por)
+  - Russian (rus)
+  - Japanese (jpn)
+  - Chinese (chi)
+- Advanced mode for better accuracy
+
+## 🚀 Deployment
+
+Ready for deployment on:
+- Streamlit Community Cloud
+- Hugging Face Spaces
+- Render
 
 ## 👤 Author
 
