@@ -8,3 +8,5 @@ pdf2docx
 PyMuPDF
 pyyaml
 xmltodict
+pytesseract
+pdf2image
